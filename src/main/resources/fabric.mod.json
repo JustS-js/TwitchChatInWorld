@@ -1,37 +1,38 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "twiw",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Twitch Chat In World",
+	"description": "Adds Twitch Chat messages as flying sprites in world. Supports Emotes!",
 	"authors": [
-		"Me!"
+		{
+			"name": "Just_S",
+			"contact": {
+				"homepage": "https://www.youtube.com/@JustS_js"
+			}
+		}
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/twiw",
+		"sources": "https://github.com/JustS-js/TwitchChatInWorld"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"license": "MIT",
+	"icon": "assets/twiw/icon.png",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
 		"client": [
-			"com.example.ExampleModClient"
+			"justs_js.twiw.TWIWModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "twiw.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
 		"fabricloader": ">=0.18.2",
-		"minecraft": "~1.21.11",
+		"minecraft": ">=1.21.10",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
